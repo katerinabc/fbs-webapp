@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang=en>
+<head>
+  <meta charset=utf-8>
+  <title>SSIP back end</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <!--to encourage the browser to use fullscreen-->
+  <meta content="width=device-width,initial-scale=1" name=viewport>
+  <link href={{ url_for('static', filename='css/bootstrap.min.css')  }} rel="stylesheet">
+  <link href={{  url_for('static', filename='css/starter-template.css')  }} rel="stylesheet">
+  <!--stylesheet. The url_for is a Flask function to find the url for a standard folder. Then, within the static folder you'll want to look for the css folder ccontaining the
+  bootstrap min file.-->
+
+
+
+</head>
+<body>
+  <nav class="navbar navbar-inverse navbar-fixed-top">
+
+      <div class="container">
+
+        <div class="navbar-header">
+
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+
+          <a class="navbar-brand" href="/">Futurizing Business Schools WebApp</a>
+        </div>
+        <div id="navbar" class="collapse navbar-collapse">
+          <ul class="nav navbar-nav">
+
+            <li><a href="/socialmediadashboard">Social Media Dashboard</a></li>
+            <li><a href="/skillsdashboard">Skills Dashboard</a></li>
+            <li><a href="/vacancydata">Topic Models Vacancy Data</a></li>
+            <li><a href="/downloaddata">Download Data</a></li>
+            </li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </nav>
+
+    <div class="starter-template">
+            <h1>Skills Dashboard</h1>
+            <p class="lead">Below you'll find an overview of skills reported by graduates who graduated between 2011-2017 from the business schools tracked. </p>
+            <br>
+            <br>
+            <iframe src="http://node000001.cluster.ids.unimaas.nl:5601/app/kibana#/dashboard/f7396770-df33-11e7-bf26-cdd331acbd16?embed=true&_g=(refreshInterval%3A(display%3AOff%2Cpause%3A!f%2Cvalue%3A0)%2Ctime%3A(from%3A'Sun%20Dec%2012%202010%2012%3A56%3A24%20GMT%2B0100'%2Cmode%3Aabsolute%2Cto%3A'Sun%20Mar%2012%202017%2012%3A56%3A24%20GMT%2B0100'))" height="2500" width="1900"></iframe>
+            <br>
+
+
+          <p>
+            <br>
+            <br>
+
+            <br>
+            <br>
+
+            <br>
+
+          </p>
+    </div>
+
+
+
+</body>
+
+
+
+
+
+</html>
