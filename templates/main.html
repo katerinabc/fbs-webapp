@@ -45,22 +45,35 @@
     </nav>
 
     <div class="starter-template">
-            <h1>Welcome to the Futurizing Business Schools Project!</h1>
-            <p class="lead">Here you'll find an overview of all analyses done to gain insight into whether business schools prepare graduates for the contemporary world of business. </p>
+            <h1>Welcome to the Future of Business Schools</h1>
 
           <img style="top:100px;left:100px" src="{{  url_for('static', filename='images/umlogo2.png')  }}">
 
 
           <h1> Executive summary </h1>
-          <p> add her the executive summary about insighs using all data sources
+          <p class="lead"> The goal of the Future of Business School project was to explore the skills students possess when leaving, and the teahcing methods
+            employed by business schools. Specifically, the focus was on the importance business schools are giving to <em> soft skills </em>, <em> data analytics</em>, <em> technological advances</em>,
+            and <em>business model disruption</em> in their programs.
+            <br>
+            We present a business intelligence dashboard <em> Futurizing Bizschool </em> for decision makers at business schools to explore their institutes activities in different
+            domains to achieve a holistic insight about how their institution is performing with regard to successfully preparing their graduates for work.
+            Specifically, decision-makers can simulataneously explore the institution's social media activity and talent management in conjunction with
+            graduates's skills and employement. Additional, macro-level information helps decision-makers place their insights within national trends.
+            <br>
+            With the help of Futurizing Bizschool decision-makers can explore their activities and compare against internal benchmarks, or compare and contrast
+            their institues against national and international competitors. The insights gained can feed into strategic plans and design the future of Business Schools.
 
-            <br>
-            <br>
+            <h2> Insights </h2>
+            <ul>
+              <li> </li>
+              <li></li>
+              <li></li>
+              <li></li>
+            </ul>
 
-            <br>
-            <br>
-
-            <br>
+            <em> Due to the current technical solutions that are available at Maastricht University, accesing the Biz-litics dashboard requires to be
+              connected to maastricht university's internet connection. If you are not at a UM building, you will have to establish a <a href="https://www.maastrichtuniversity.nl/support/ict-services/manuals-and-information">
+                VPN connection.</a></em>
 
           </p>
 
@@ -152,6 +165,7 @@
                 <td> We explored the vacancies using natural languague processing to get a set of topics which group skills together.  </td>
                 <td> 16,318 vacancies </td>
               </tr>
+            </tabe>
           </p>
     </div>
 
@@ -159,12 +173,8 @@
           <p> <h2> Institutes </h2> </p>
 
           <p> Our sample consisted of 150 business schools that are accredited by <a href = "http://www.efmd.org/accreditation-main/equis"> EQUIS </a>,
-            the European accreditation association conducting quality assurance of business school,
-            and the top 100 most innovative universities according to Reuters.
-            The ranking for innovative universities is based on the following <a href="https://www.reuters.com/innovative-universities-2017/methodology">
-              criteria </a>: scientific output,
-            technological advances, and progress that stimulate the creation of new markets and industries.
-            Our sample of institutions is located in 42 countries. </p>
+            the European accreditation association conducting quality assurance of business school.
+            Our sample of institutions is located in XX countries. </p>
           <p> <h2> Data Sources </h2>
           </p>
           <p>For each institution, we captured their social media activity between <em>January 1st 2011 and September 7th 2017</em>.
@@ -175,24 +185,74 @@
              Due to language and technical issues we focused on posts that were in English and contained no more than 4000 bites,
              between 1024 and 4096 characters. After data cleaning our database contained a total of 652,625 posts, consisting of 386,882 tweets and
              265,743 Facebook posts.
+             <br>
+             Using literature we created skill categorize to help exploring the data. We focused on three <em>data-driven decision making skills </em> (Big data, data science, and relational big data),
+             and three <em>21st century skills </em> (collaboraiton, communication, ICT literacy, and Citizenship). For each skill category we developed a thesaurus, a list of
+             words that describe the skill.
+
+           <table>
+             <tr>
+               <th> Skill Category </th> <th> Words </th>
+             </tr>
+             <tr>
+               <td> Collaboration </td>
+               <td> teamwork teaming "collaboration skill" negotiat* compromise "shared responsibility" "team member" "individual contribution" </td>
+               <td> </td>
+             </tr>
+             <tr>
+               <td>Communication </td>
+               <td> "communication skill" mother?tongue foreign?tongue language "written communication" "verbal communication" "interpret world" "interpret reality" vocabulary vocab grammar grammatical "verbal interaction" dialogue intercultural "listening skill" "speaking skill" "reading skill" "writing skill" "spoken message" </td>
+             </tr>
+             <tr>
+               <td>ICT Literacy </td>
+               <td> "information literacy" "digital environment" "digital skill" "process information" "organize information" "transform information" "create knowledge" "create information" "research skill" problem?solving~ "integrate information" "summarize information" "summarise information" "analyze information" "analyse information" "interpret information" "model information" "ICT literacy" "ICT skill" </td>
+             </tr>
+             <tr>
+               <td> Citizenship</td>
+               <td> citizenship "societal literacy" "cultural literacy" "personal competence" "personal skill" "interpersonal competence" "interpersonal skill" "intercultural competence" "intercultural skill" "social life" "working life" "codes of conduct" manners norms multi?cultural socio?economic tolerance viewpoint "negotiating skill" empathy assertiveness integrity citizenship  "civil right" solidarity "value systems" "ethnic group" "religious group" responsibility "shared value"</td>
+             </tr>
+             <tr>
+               <td> Big Data</td>
+               <td> Apache Hadoop Hive Java Spark Yarn Scala SQL TensorFlow Python "streaming data analytics"~ "Temporal data analytics"~ "geospatial data analytics"~ "network analysis" "network analytics" "text analysis" "text analytics" "latent semantic analysis" lsa Database program?ing MapReduce HDFS NoSQL HBase Cassandra MongoDB "C++" "C#" "Structured Query language"</td>
+             </tr>
+             <tr>
+               <td> Relational Big Data</td>
+               <td> Data?warehousing~ dimensional?modeling "extraction transformation and loading" "dimensional data visualization" dashboard scorecard "advanced SQL" "procedural extensions" "intermediate SQL" "relational data model" normalization "ER diagrams" Hive</td>
+             </tr>
+             <tr>
+               <td> Data Science</td>
+               <td>  "Data products development" "R Shiny" "deep learning" "reinforcement learning"  "ensemble learning" "neural network"~ "natural language processing" nlp "random forests"~ "uni-directed graphical" math statistic~ classification Regression "support vector machines"~ svm algorithm "linear regression" "nonlinear regression" "logistic regression" "link analysis" "sequence analysis" "cluster analysis" "graph-based techniques"~ k?means "hierarchical clustering" "text mining"~ "web analytics"~ "linear algebra" calculus probability R?program?ing</td>
+             </tr>
+           </table>
            </p>
           <p>Information about students’ self-reported skills and employment information was gathered using <a href = "www.linkedin.com"> <strong>LinkedIn’s school pages </strong></a>.
             This does not include any personal information. The school's pages provide aggregated information about the
              top self-reported skills and current employers of graduates who have attended the institutes during our selected time period.
+           </p>
+           <p>
+             Once our students graduate from their programs, they will be working for companies, big and small. We wanted to understand what it means to work
+             for these companies. Are they innovative? Do they provide a good working climate ? To get insights about this, we decided to gather information
+             about what employees are saying about their employers. Therefore, we collected employee reviews from the recruitment site <a href="www.indeed.com"> indeed </a>.
+             We scrapped reviews from companies where our graduates worked with the aim to rank companies according to how favorable the reviews were. To make the Analysis
+             manageable, for each company we took a sample of 1000 reviews, calculated the sentiment for each review, and averaged the sentiments for each company.
+             These steps were conducted five times, and the sentiment values for each company was averaged across these five analysis cycle. Our ranking ranged from
+             +1 (good company) to -1 (bad company). The mean sentiment was 0.64 (sd = 0.1). The lowest score was -0.18 and the highest score was 0.85.
            </p>
           <p>With the aim to understand the research and teaching expertise of business school we collected information about vacancies
             from academic institutes. We collaborated with <a href ="www.academictransfer.nl"><strong>Academic Transfer </strong></a>,
             a company publicizing vacancies in the Dutch Academic labor market.
             From their dataset we analyzed vacancies across all scientific disciplines from 2010-2017. We conducted an automatic topic analyzes on the
             vacancies description and requirements
-             (<a href="http://blog.echen.me/2011/08/22/introduction-to-latent-dirichlet-allocation/"> Latent Dirichlet Analysis </a>).
+             (<a href="http://blog.echen.me/2011/08/22/introduction-to-latent-dirichlet-allocation/"> Latent Dirichlet Analysis </a>). We analyzed the word distributions
+             across several different models and decided that the clustering of words into topics wast most insightful with eleven topics.
+             The results are reported in [add tab]. Each circle represents one topic. By selecting a topic, the words and their probability to be part of this topic are shown.
           </p>
           <p> To gain better insight into the labor market and skill level, we searched for open data sets.
             The European Commission conducts reseach on <a href="https://ec.europa.eu/digital-single-market/en/news/new-report-shows-digital-skills-are-required-all-types-jobs">
-            <strong>digital skills</strong> </a>. From this research project, we included the <a href"https://ec.europa.eu/digital-single-market/en/news/ict-work-digital-skills-workplace"> Digital Skill Survey </a>. Specifically, we added
+            <strong>digital skills</strong> </a>. From this research project, we included the <a href="https://ec.europa.eu/digital-single-market/en/news/ict-work-digital-skills-workplace"> Digital Skill Survey </a>. Specifically, we added
             survey respondents’ information about their company (size of company, country of HQ, job title) and their estimates about digital skills needed and
-            possessed across different job categorize (professionals, managers, sales). In the survey’s code book these questions were Q16_1_1 until Q16_10_5,
-             Q23, Q30 until Q33.
+            possessed across different job categorize (professionals, managers, sales). In the survey’s code book these questions were Q16, and Q23
+            for managers, professionals, technicians, clerical support worker, and sales wokers.
              <br>
              Also from the European commission, we included <a href="http://appsso.eurostat.ec.europa.eu/nui/show.do?dataset=isoc_sk_dskl_i&lang=en">
                Eurostat’s dataset </a> on managers’ perception about digital skill of employees, downloaded via <a href="www.datamarket.com"> datamarket </a>.

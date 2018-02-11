@@ -9,7 +9,7 @@ Created on Mon May 29 13:29:04 2017
 import os
 from flask import Flask, request, render_template, redirect, send_from_directory
 
-os.chdir('/Users/katerinadoyle/Documents/futurizingbusinessschools/webapp')
+os.chdir('/Users/katerinadoyle/Documents/gitrepo/fbswebapp')
 
 
 ############DEFINE WEB APP VARIABLES##################
