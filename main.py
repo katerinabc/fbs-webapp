@@ -1,21 +1,13 @@
-#!/usr/bin/env python2
-# -*- coding: utf-8 -*-
-"""
-Created on Mon May 29 13:29:04 2017
 
-@author: guysimons
-"""
+# A very simple Flask Hello World app for you to get started with...
 
-import os
 from flask import Flask, request, render_template, redirect, send_from_directory
 
-os.chdir('/Users/katerinadoyle/Documents/gitrepo/fbswebapp')
-
-
-############DEFINE WEB APP VARIABLES##################
 app = Flask(__name__)
 
-
+#@app.route('/')
+#def hello_world():
+#    return 'Hello from Flask!'
 
 ############LANDING PAGE & INSTRUCTIONS##################
 @app.route("/")
@@ -27,18 +19,13 @@ def socialmediadashboard():
      return render_template("socialmediadashboard.html")
 
 @app.route('/skillsdashboard')
-def skillsdashboard():           
+def skillsdashboard():
      return render_template('skillsdashboard.html')
 
 @app.route('/vacancydata')
-def vacancydata():           
+def vacancydata():
      return render_template('vacancydata.html')
 
 @app.route('/downloaddata')
-def downloaddata():           
-     return render_template('downloaddata.html')
-
-if __name__ == "__main__":
-    app.run(port = 5002)
-
-
+def downloaddata():
+    return render_template('downloaddata.html')
