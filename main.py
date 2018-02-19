@@ -12,7 +12,7 @@ app = Flask(__name__)
 ############LANDING PAGE & INSTRUCTIONS##################
 @app.route("/")
 def index():
-    return render_template("main.html")
+    return render_template("index.html")
 
 @app.route("/socialmediadashboard")
 def socialmediadashboard():
