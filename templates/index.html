@@ -3,34 +3,37 @@
 	Urban by TEMPLATED
 	templated.co @templatedco
 	Released for free under the Creative Commons Attribution 3.0 license (templated.co/license)
+
+	menu picture (hamburger) not loading
+	datasource.html not found (404 error)
 -->
 <html>
 	<head>
 		<title>Futurizing Business Schools</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
-	    <!--<link href={{  url_for('static', filename='css/starter-template.css')  }} rel="stylesheet">-->
-	    <link href={{  url_for('static', filename='css/main.css')              }} rel="stylesheet">
+		<link href={{ url_for('static', filename='css/bootstrap.min.css')  }} rel="stylesheet">
+		<link rel="stylesheet" href="/static/css/main.css" />
+	    <!--<link href={{  url_for('static', filename='css/main.css')              }} rel="stylesheet">-->
 		<!--<link href={{  url_for('static', filename='/css/font-awesome.min.css')       }} rel="stylesheet">-->
-		<link rel="stylesheet" href="../static/css/main.css" />
 	</head>
 	<body>
 
 		<!-- Header -->
-			<header id="header" class="alt">
-				<div class="logo"><a href="templates/index.html"></a></div>
-				<a href="#menu">Menu</a>
-			</header>
+			<!--<header id="header" class="alt">
+				<div class="logo"><a href="index">Futurizing Business Schools</a></div>
+				<a href="#menu">Menu</a>-->
+
 
 		<!-- Nav -->
-			<nav id="menu">
-				<ul class="links">
-					<li><a href="templates/index.html ">Home</a></li>
-					<li><a href="templates/skillsdashboard.html">Skills Dashboard</a></li>
-					<li><a href="templates/DataCollection.html">Data Collection</a></li>
-					<li><a href="templates/vacancydata.html">Human Capital Strategy </a></li>
-				</ul>
-			</nav>
+		  <ul>
+            {% for item in nav.top %}
+            <li class="{{ 'active' if item.is_active else '' }}">
+                <a href="{{ item.url }}">{{ item.label }}</a>
+            </li>
+            {% endfor %}
+        </ul>
+    </header>
 
 		<!-- Banner -->
 			<section id="banner">
@@ -60,7 +63,8 @@
 								<div class="flex flex-2">
 									<div class="col col1">
 										<div class="image round fit">
-											<a href="templates/skillsdashboard.html" class="link"><img src="../images/analytics01.png" alt="" /></a>
+											<a href="/skillsdashboard" class="link">
+											    <img src="{{  url_for('static', filename='images/analytics01.png')  }}" alt="" /></a>
 										</div>
 									</div>
 									<div class="col col2">
@@ -68,13 +72,16 @@
 										<p> Our dashboard combines data from various sources to provide you with a comprehensive view. It conains macro-information from the OECD and European Commission,
 										creating a national benchmark. It also combines your business school's social media activity, and other information about your students.
 									The dashboard is interactive, you can focus on specific business schools, countries, skills etc.</p>
-										<a href="templates/skillsdashboard.html" class="button">Learn More</a>
+										<a href="/skillsdashboard" class="button">Learn More</a>
 									</div>
 								</div>
 						</div>
 					</section>
 
-				<!-- Section 2 -->
+				<!-- Section 2
+					something wrong here with the hyperlinks. maybe just give it some time.
+				change order of columns
+				-->
 					<section class="wrapper style2">
 						<div class="inner">
 							<div class="flex flex-2">
@@ -85,12 +92,12 @@
 										</p>
 									<p> The dasboard combines data from social media platforms, employer reviews, LinkedIn school pages, academic vacancies, and data collected by the OECD and European Commission.
 										</p>
-									<!--<p>Sed congue malesuada nibh, a varius odio vehicula aliquet. Aliquam consequat, nunc quis sollicitudin aliquet, enim magna cursus auctor lacinia nunc ex blandit augue. Ut vitae neque fermentum, luctus elit fermentum, porta augue. Nullam ultricies, turpis at fermentum iaculis, nunc justo dictum dui, non aliquet erat nibh non ex. </p>-->
-									<a href="#" class="button">Learn More</a>
+									<a href="/datasources" class="button">Learn More</a>
 								</div>
 								<div class="col col1 first">
 									<div class="image round fit">
-										<a href="templates/DataCollection.html" class="link"><img src="../images/datacollection.jpg" alt="" /></a>
+										<a href="/datasources" class="link"><img src="{{  url_for('static', filename='images/datacollection.jpg')  }}" alt="" /></a>
+
 									</div>
 								</div>
 							</div>
@@ -108,11 +115,11 @@
 									but also on the content and quality of teaching. In collaboration with <a href="www.academictransfer.com">Academic Transfer</a>
 								this project also includes an analyzis of the human capital Business Schools hired wanted to hire. We focus on the vacancy text
 							as an indication of the human capital strategy that is in place instead of the supply of skills the labor market can provide. </p>
-										<a href="#" class="button">Learn More</a>
+										<a href="/vacancydata" class="button">Learn More</a>
 									</div>
 									<div class="col col1 first">
 										<div class="image round fit">
-											<a href="templates/vacancydata.html" class="link"><img src="../images/resume.png" alt="" /></a>
+											<a href="/vacancydata" class="link"><img src="{{  url_for('static', filename='images/resume.png')  }}" alt="" /></a>
 										</div>
 									</div>
 								</div>
@@ -139,12 +146,12 @@
       </footer>
 
     <!-- Scripts -->
-      <script src="static/js/jquery.min.js"></script>
-      <script src="static/js/jquery.scrolly.min.js"></script>
-      <script src="static/js/jquery.scrollex.min.js"></script>
-      <script src="static/js/skel.min.js"></script>
-      <script src="static/js/util.js"></script>
-      <script src="static/js/main.js"></script>
+      <script src="/static/js/jquery.min.js"></script>
+      <script src="/static/js/jquery.scrolly.min.js"></script>
+      <script src="/static/js/jquery.scrollex.min.js"></script>
+      <script src="/static/js/skel.min.js"></script>
+      <script src="/static/js/util.js"></script>
+      <script src="/static/js/main.js"></script>
 
   </body>
 </html>
