@@ -1,20 +1,20 @@
 
 # A very simple Flask Hello World app for you to get started with...
 
-from flask import Flask, request, render_template, redirect, send_from_directory
-from flask.ext.navigation import Navigation
+from flask import Flask, render_template
+#from flask.ext.navigation import Navigation
 
 app = Flask(__name__)
-nav = Navigation(app)
+#nav = Navigation(app)
 
 #@app.route('/')
 #def hello_world():
 #    return 'Hello from Flask!'
 
 ############LANDING PAGE & INSTRUCTIONS##################
-nav.Bar('top', [
-    nav.Item('Home', 'Dashboard', 'Data Collection', 'Human Capital Strategy'),
-])
+#nav.Bar('top', [
+#    nav.Item('Home', 'Dashboard', 'Data Collection', 'Human Capital Strategy'),
+#])
 
 @app.route("/")
 def index():
